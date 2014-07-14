@@ -76,7 +76,7 @@ rescue OptionParser::InvalidOption => e
   exit
 end
 
-if options[:aws_access_key].nil? || options[:aws_secret_key].nil?
+if options[:aws_access_key].nil? || options[:aws_secret_access_key].nil?
   Kernel.abort('Not all mandatory options have been provided. Exiting.')
 end
 

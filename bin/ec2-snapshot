@@ -27,6 +27,7 @@ optparse = OptionParser.new do |opts|
     options[:aws_secret_access_key] = secret_access_key
   end
 
+  ENV['EC2_URL'] = nil if ENV['EC2_URL'] # Unset the globally set EC2_URL, right_aws is not compatible with this option
   opts.on('--aws-region REGION', 'AWS Region. Mandatory. Example regions are eu-west-1 and us-west-1') do |region|
     options[:aws_region] = region
   end

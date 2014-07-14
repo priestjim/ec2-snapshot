@@ -22,9 +22,9 @@ optparse = OptionParser.new do |opts|
     options[:aws_access_key] = access_key
   end
 
-  options[:aws_secret_key] = ENV['AWS_SECRET_KEY']
+  options[:aws_secret_access_key] = ENV['AWS_SECRET_KEY']
   opts.on('--aws-secret-key KEY', 'AWS Secret Access Key. Either set ENV["AWS_SECRET_KEY"] or provide it as an option.') do |secret_access_key|
-    options[:aws_secret_key] = secret_access_key
+    options[:aws_secret_access_key] = secret_access_key
   end
 
   opts.on('--aws-region REGION', 'AWS Region. Mandatory. Example regions are eu-west-1 and us-west-1') do |region|
